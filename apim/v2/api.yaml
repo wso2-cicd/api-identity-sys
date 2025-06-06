@@ -1,0 +1,162 @@
+type: api
+version: v4.5.0
+data:
+  id: 722d94e9-5d3e-4542-bb61-adadeb657405
+  name: Identity Sys
+  context: /identity-sys
+  version: v2
+  provider: admin
+  lifeCycleStatus: CREATED
+  responseCachingEnabled: false
+  cacheTimeout: 300
+  hasThumbnail: false
+  isDefaultVersion: false
+  isRevision: false
+  revisionId: 0
+  enableSchemaValidation: false
+  enableSubscriberVerification: false
+  type: HTTP
+  audiences:
+   - all
+  transport:
+   - http
+   - https
+  tags: []
+  policies:
+   - Gold
+   - Silver
+   - Unlimited
+  organizationPolicies: []
+  authorizationHeader: Authorization
+  apiKeyHeader: ApiKey
+  securityScheme:
+   - oauth_basic_auth_api_key_mandatory
+   - oauth2
+  visibility: PUBLIC
+  visibleRoles: []
+  visibleTenants: []
+  visibleOrganizations:
+   - none
+  mediationPolicies: []
+  apiPolicies:
+    request:
+     -
+      policyName: addLogMessage
+      policyVersion: v1
+      policyType: common
+      policyId: e7cf750a-8141-40d7-9ed5-ed41e4d79aa9
+      parameters: {}
+     -
+      policyName: addHeader
+      policyVersion: v2
+      policyType: common
+      policyId: 8d328983-aac6-4735-8c75-fdd92cf9a7f3
+      parameters:
+        headerName: X
+        headerValue: "Y"
+     -
+      policyName: disableChunking
+      policyVersion: v1
+      policyType: common
+      policyId: 3bd00052-0f5c-4ab9-8101-ddc5802c621e
+      parameters: {}
+    response:
+     -
+      policyName: addLogMessage
+      policyVersion: v1
+      policyType: common
+      policyId: e7cf750a-8141-40d7-9ed5-ed41e4d79aa9
+      parameters: {}
+     -
+      policyName: removeHeader
+      policyVersion: v1
+      policyType: common
+      policyId: 090ebf8d-ed3b-4a74-aef3-0a693479f0cf
+      parameters:
+        headerName: Z
+    fault:
+     -
+      policyName: addLogMessage
+      policyVersion: v1
+      policyType: common
+      policyId: e7cf750a-8141-40d7-9ed5-ed41e4d79aa9
+      parameters: {}
+  subscriptionAvailability: CURRENT_TENANT
+  subscriptionAvailableTenants: []
+  additionalProperties: []
+  additionalPropertiesMap: {}
+  accessControl: NONE
+  accessControlRoles: []
+  businessInformation: {}
+  corsConfiguration:
+    corsConfigurationEnabled: false
+    accessControlAllowOrigins:
+     - '*'
+    accessControlAllowCredentials: false
+    accessControlAllowHeaders:
+     - authorization
+     - Access-Control-Allow-Origin
+     - Content-Type
+     - SOAPAction
+     - apikey
+     - Internal-Key
+    accessControlAllowMethods:
+     - GET
+     - PUT
+     - POST
+     - DELETE
+     - PATCH
+     - OPTIONS
+  websubSubscriptionConfiguration:
+    enable: false
+    secret: ""
+    signingAlgorithm: SHA1
+    signatureHeader: x-hub-signature
+  createdTime: "1749209845818"
+  lastUpdatedTimestamp: "1749210130072"
+  lastUpdatedTime: 2025-06-06 07:42:10.072
+  endpointConfig:
+    endpoint_type: http
+    production_endpoints:
+      url: https://dev.x.com/iam/scim
+  endpointImplementationType: ENDPOINT
+  subtypeConfiguration:
+    subtype: DEFAULT
+  scopes: []
+  operations:
+   -
+    id: ""
+    target: "/accounts/{account-number}"
+    verb: GET
+    authType: Application & Application User
+    throttlingPolicy: Unlimited
+    scopes: []
+    usedProductIds: []
+    operationPolicies:
+      request: []
+      response: []
+      fault: []
+   -
+    id: ""
+    target: "/accounts/{account-number}"
+    verb: DELETE
+    authType: Application & Application User
+    throttlingPolicy: Unlimited
+    scopes: []
+    usedProductIds: []
+    operationPolicies:
+      request: []
+      response: []
+      fault: []
+  categories: []
+  keyManagers:
+   - all
+  advertiseInfo:
+    advertised: false
+    apiOwner: admin
+    vendor: WSO2
+  gatewayVendor: wso2
+  gatewayType: wso2/synapse
+  asyncTransportProtocols: []
+  egress: false
+  organizationId: carbon.super

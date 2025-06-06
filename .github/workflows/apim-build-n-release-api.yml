@@ -1,0 +1,17 @@
+on:
+  push:
+    paths:
+      - apim/**
+    branches:
+      - main
+  workflow_dispatch:
+
+name: Build and Release API Repo
+
+jobs:
+  release_repo:
+    name: Release Repo
+    uses: wso2-cicd/wso2-workflows/blob/main/.github/workflows/release-apim-api.yml@main
+    with:
+      pomPath: apim/pom.xml
+    secrets: inherit
