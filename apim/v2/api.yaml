@@ -6,7 +6,7 @@ data:
   context: /identity-sys
   version: v2
   provider: admin
-  lifeCycleStatus: CREATED
+  lifeCycleStatus: PUBLISHED
   responseCachingEnabled: false
   cacheTimeout: 300
   hasThumbnail: false
@@ -24,8 +24,6 @@ data:
   tags: []
   policies:
    - Gold
-   - Silver
-   - Unlimited
   organizationPolicies: []
   authorizationHeader: Authorization
   apiKeyHeader: ApiKey
@@ -44,13 +42,13 @@ data:
       policyName: addLogMessage
       policyVersion: v1
       policyType: common
-      policyId: e7cf750a-8141-40d7-9ed5-ed41e4d79aa9
+      policyId: 13406e4b-360f-464b-8dfc-7c14af6cd39f
       parameters: {}
      -
       policyName: addHeader
       policyVersion: v2
       policyType: common
-      policyId: 8d328983-aac6-4735-8c75-fdd92cf9a7f3
+      policyId: 664c1555-e505-46d7-8fad-8c3b61a7185e
       parameters:
         headerName: X
         headerValue: "Y"
@@ -58,20 +56,20 @@ data:
       policyName: disableChunking
       policyVersion: v1
       policyType: common
-      policyId: 3bd00052-0f5c-4ab9-8101-ddc5802c621e
+      policyId: 26c84ed6-94aa-4428-804f-1ae2501564d8
       parameters: {}
     response:
      -
       policyName: addLogMessage
       policyVersion: v1
       policyType: common
-      policyId: e7cf750a-8141-40d7-9ed5-ed41e4d79aa9
+      policyId: 13406e4b-360f-464b-8dfc-7c14af6cd39f
       parameters: {}
      -
       policyName: removeHeader
       policyVersion: v1
       policyType: common
-      policyId: 090ebf8d-ed3b-4a74-aef3-0a693479f0cf
+      policyId: 84f66106-eb6d-4f61-b6ac-a09e73e17508
       parameters:
         headerName: Z
     fault:
@@ -79,7 +77,7 @@ data:
       policyName: addLogMessage
       policyVersion: v1
       policyType: common
-      policyId: e7cf750a-8141-40d7-9ed5-ed41e4d79aa9
+      policyId: 13406e4b-360f-464b-8dfc-7c14af6cd39f
       parameters: {}
   subscriptionAvailability: CURRENT_TENANT
   subscriptionAvailableTenants: []
@@ -113,8 +111,8 @@ data:
     signingAlgorithm: SHA1
     signatureHeader: x-hub-signature
   createdTime: "1749209845818"
-  lastUpdatedTimestamp: "1749210130072"
-  lastUpdatedTime: 2025-06-06 07:42:10.072
+  lastUpdatedTimestamp: "1750272753852"
+  lastUpdatedTime: 2025-06-18 14:52:33.852
   endpointConfig:
     endpoint_type: http
     production_endpoints:
