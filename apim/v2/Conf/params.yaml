@@ -31,3 +31,37 @@ environments:
       policies:
         - Unlimited
         - Gold
+
+  - name: uat
+    configs:
+      endpoints:
+        production:
+          url: https://uat.x.com/iam/scim
+      deploymentEnvironments:
+        - displayOnDevportal: true
+          deploymentEnvironment: Default
+          deploymentVhost: localhost
+      certs:
+        - hostName: uat.x.com
+          alias: backendUAT
+          path: backendUAT.crt
+      policies:
+        - Unlimited
+        - Gold
+
+  - name: prod
+    configs:
+      endpoints:
+        production:
+          url: https://x.com/iam/scim
+      deploymentEnvironments:
+        - displayOnDevportal: true
+          deploymentEnvironment: Default
+          deploymentVhost: localhost
+      certs:
+        - hostName: x.com
+          alias: backendPROD
+          path: backendPROD.crt
+      policies:
+        - Unlimited
+        - Gold
