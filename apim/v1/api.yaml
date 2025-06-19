@@ -23,10 +23,7 @@ data:
    - https
   tags: []
   policies:
-   - Bronze
    - Gold
-   - Silver
-   - Unlimited
   organizationPolicies: []
   authorizationHeader: Authorization
   apiKeyHeader: ApiKey
@@ -45,21 +42,37 @@ data:
       policyName: addLogMessage
       policyVersion: v1
       policyType: common
-      policyId: b1c1e4bb-cf72-4480-a8ec-e03d6f339eba
+      policyId: 52c85fe5-5d6f-43db-989b-a99bbf88496d
       parameters: {}
+     -
+      policyName: addHeader
+      policyVersion: v2
+      policyType: common
+      policyId: 2aaf21e6-4804-4a86-b07b-57f81e359481
+      parameters:
+        headerName: X
+        headerValue: "Y"
     response:
      -
       policyName: addLogMessage
       policyVersion: v1
       policyType: common
-      policyId: b1c1e4bb-cf72-4480-a8ec-e03d6f339eba
+      policyId: 52c85fe5-5d6f-43db-989b-a99bbf88496d
       parameters: {}
+     -
+      policyName: addHeader
+      policyVersion: v2
+      policyType: common
+      policyId: 2aaf21e6-4804-4a86-b07b-57f81e359481
+      parameters:
+        headerName: Z
+        headerValue: "Y"
     fault:
      -
       policyName: addLogMessage
       policyVersion: v1
       policyType: common
-      policyId: b1c1e4bb-cf72-4480-a8ec-e03d6f339eba
+      policyId: 52c85fe5-5d6f-43db-989b-a99bbf88496d
       parameters: {}
   subscriptionAvailability: CURRENT_TENANT
   subscriptionAvailableTenants: []
@@ -93,14 +106,12 @@ data:
     signingAlgorithm: SHA1
     signatureHeader: x-hub-signature
   createdTime: "1749208010840"
-  lastUpdatedTimestamp: "1749208241872"
-  lastUpdatedTime: 2025-06-06 07:10:41.872
+  lastUpdatedTimestamp: "1750291695454"
+  lastUpdatedTime: 2025-06-18 20:08:15.454
   endpointConfig:
     endpoint_type: http
-    sandbox_endpoints:
-      url: https://ciam-dev.wso2.com
     production_endpoints:
-      url: https://ciam-dev.wso2.com
+      url: https://dev.x.com/iam/scim
   endpointImplementationType: ENDPOINT
   subtypeConfiguration:
     subtype: DEFAULT
@@ -115,7 +126,15 @@ data:
     scopes: []
     usedProductIds: []
     operationPolicies:
-      request: []
+      request:
+       -
+        policyName: addQueryParam
+        policyVersion: v1
+        policyType: common
+        policyId: 9c55ac05-50b9-4cc7-b881-01eb8d58dc32
+        parameters:
+          paramKey: x
+          paramValue: "y"
       response: []
       fault: []
   categories: []

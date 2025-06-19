@@ -11,7 +11,7 @@ security:
 paths:
   /accounts/{account-number}:
     get:
-      summary: Get Account by Account Number 
+      summary: Get Account by Account Number
       description: Get Account by Account Number.
       parameters:
        -
@@ -74,11 +74,7 @@ x-wso2-cors:
    - OPTIONS
 x-wso2-production-endpoints:
   urls:
-   - https://ciam-dev.wso2.com
-  type: http
-x-wso2-sandbox-endpoints:
-  urls:
-   - https://ciam-dev.wso2.com
+   - https://dev.x.com/iam/scim
   type: http
 x-wso2-basePath: /identity-sys/v1
 x-wso2-transports:
